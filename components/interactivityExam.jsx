@@ -7,17 +7,17 @@ const InteractivityExam = ({ list }) => {
 
   useEffect(() => {
     setWord((prevName) => prevName.toUpperCase());
-  }, []);
+  }, [word]);  
 
+  ////////////////////////////////////////////////////////////////
   const handleNameChange = (event) => {
     setWord(event.target.value);
-    getWord();
-  };
-
+    getWord(); // Answer of question 8
+};
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-
+////////////////////////////////////////////////////////////////
   return (
     <div>
       {word && <div>{word}</div>}
@@ -46,7 +46,8 @@ const InteractivityExam = ({ list }) => {
       {word === "show list" && (
         <div>
           {list.map((item, index) => (
-            <div key={index}>{item.name}</div>
+            <div key={index}>{item.name}
+            </div>
           ))}
         </div>
       )}
