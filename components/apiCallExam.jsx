@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 
 const APICallExam = () => {
+  useEffect(() => {
+    const url = 'URL?passcode=${passcode}';
+  });
   return (
     <div>
       <div className="flex items-center justify-center">
