@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import profileData from "./profile.json";
 
 const Portfolio = () => {
+  const MY_PASSCODE = process.env.MY_PASSCODE;
+
   const router = useRouter();
   const { name, title, description, skills, projects } = profileData;
 
